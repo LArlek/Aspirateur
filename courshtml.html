@@ -1,0 +1,227 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>
+		cours de html
+	</title>
+	<link rel="shortcut icon" href="https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-html-5-512.png" type="image/x-icon" />
+	<style>
+		*{
+			margin:0px 0px 0px 0px;
+		}
+		#titre{
+			background-color:rgb(191, 191, 191);
+			/*background-color: #bfbfbf;*/
+			line-height: 120px;
+			color: black;
+			font-weight: bold;
+			font-family: fantasy;
+			position: fixed;
+			padding-right: 50%;
+			padding-left:  47%;
+			font-size:60px;
+			
+
+		}
+		#titre:hover{
+			background-color:rgb(191, 191, 200);
+			line-height: 125px;
+		}
+		.menuplus{
+			padding-top: 160px;
+			padding-bottom: 35px;
+		}
+		#carre{
+			border:solid 1px black;
+			background-color:#E4F1FE;
+			width: 15%;
+			float:left;
+			position:fixed;
+			margin-left: 3%;
+			margin-top: 165px;
+			height: 76%;
+			border-radius:4px;
+			line-height: em;
+			overflow: hidden; 
+		}
+		#carre:hover{
+			background-color:#F5D76E;
+			border-radius:0px; 
+		}
+		.paragraphe{
+			float:right;
+			line-height: 24px;
+			width: 78%;
+			padding-right: 10px;
+			font-family: sans-serif;
+		}
+		.lien{
+			text-decoration: none;
+		}
+		.lien:link{
+			color: red;
+		}
+		.lien:hover{
+			background-color: white;
+		}
+		.lien:visited{
+			color: black;
+		}
+		.lien:focus{
+			color: green;
+			background-color:black; 
+		}
+		.balise{
+			font-size: 22px;
+			text-align: center;
+			font-weight: bold;
+			font-family:cursive;
+		}
+		.ensavoirplus:link{
+			color: black;
+			font-style: italic;
+		}
+		.ensavoirplus:visited{
+			text-decoration:none;
+			color: black;
+		}
+		#invisibletext{
+			height: 180px;
+		}
+	</style>
+</head>
+<body>
+	<div id="titre">HTML</div>
+	<div id="invisiblehaut"></div>
+	<div id="invisiblecote"></div>
+	<div id="carre">
+		<ul><tt>
+			<br>
+			<li><a class="lien" href="#invisibletext">&lt!doctype&gt	</a></li>
+			<li><a class="lien" href="#doctype">&lt!-- --&gt</a></li>
+			<li><a class="lien" href="#commentaire">&ltaddress&gt  </a></li>
+			<li><a class="lien" href="#adresse">&lta&gt</a></li>
+			<li><a class="lien" href="#a">&ltb&gt</a></li>
+			<li><a class="lien" href="#b">&ltbody&gt</a></li>
+			<li><a class="lien" href="#body">&ltbr&gt</a></li>
+			<li><a class="lien" href="#br">&ltbutton&gt</a></li>
+			<li><a class="lien" href="#button">&ltcite&gt</a></li>
+			<li><a class="lien" href="#cite">&ltdiv&gt</a></li>
+			<li><a class="lien" href="#div">&ltH1-6&gt</a></li>
+			<li><a class="lien" href="#H1">&lthead&gt</a></li>
+			<li><a class="lien" href="#head">&lthr&gt</a></li>
+			<li><a class="lien" href="#hr">&lthtml&gt</a></li>
+			<li><a class="lien" href="#html">&lti&gt</a></li>
+			<li><a class="lien" href="#">&ltimg&gt</a></li>
+			<li><a class="lien" href="#">&ltli&gt</a></li>
+			<li><a class="lien" href="#">&ltlink&gt</a></li>
+			<li><a class="lien" href="#">&ltmeta&gt</a></li>
+			<li><a class="lien" href="#">&ltol&gt</a></li>
+			<li><a class="lien" href="#">&ltoption&gt</a></li>
+			<li><a class="lien" href="#">&ltp&gt</a></li>
+			<li><a class="lien" href="#">&lts&gt</a></li>
+			<li><a class="lien" href="#">&ltscript&gt</a></li>
+			<li><a class="lien" href="#">&ltselect&gt</a></li>
+			<li><a class="lien" href="#">&ltspan&gt</a></li>
+			<li><a class="lien" href="#">&ltstrong&gt</a></li>
+			<li><a class="lien" href="#">&ltstyle&gt</a></li>
+			<li><a class="lien" href="#">&lttable&gt</a></li>
+			<li><a class="lien" href="#">&lttbody&gt</a></li>
+			<li><a class="lien" href="#">&ltthead&gt</a></li>
+			<li><a class="lien" href="#">&lttr&gt</a></li>
+			<li><a class="lien" href="#">&lttd&gt</a></li>
+			<li><a class="lien" href="#">&lttextarea&gt</a></li>
+			<li><a class="lien" href="#">&lttfoot&gt</a></li>
+			<li><a class="lien" href="#">&ltth&gt</a></li>
+			<li><a class="lien" href="#">&lttitle&gt</a></li>
+			<li><a class="lien" href="#">&lttt&gt</a></li>
+			<li><a class="lien" href="#">&ltul&gt</a></li>
+			<li><a class="lien" href="#">&lttitle&gt</a></li>
+			<!--<li><a class="lien" href="#">&lt &gt</a></li>-->
+		</tt></ul>
+	</div>
+	<article class="paragraphe">
+		<p>
+			<div id="invisibletext"></div> 
+			<div class="balise" id="doctype">&lt!doctype&gt</div><br>
+			Le Doctype s’insère en tout début de page. Il sert à définir le type du document afin qu’il soit correctement interprété par le navigateur. Vous pouvez placez sa balise à la première ligne de votre code HTML si vous le souhaitez. Le Doctype doit toujours se situer avant la balise &ltHTML&gt.
+			Cette déclaration n’est pas une balise HTML5 comme les autres, c’est une instruction pour le navigateur à propos de la version de HTML de votre document.<br>
+			<a class="ensavoirplus" href="http://41mag.fr/un-doctype-simplifie-en-html-5.html" target="_blank">en savoir plus</a><hr><br>
+			
+			<div class="balise" id="commentaire">&lt!-- --&gt</div><br>
+			La syntaxe &lt!-- ... --&gt permet de mettre en commentaire des blocs de code. Les zones commentées ne seront pas prises en compte lors de l'affichage des éléments dans le navigateur, elles seront tout simplement ignorées. 
+			Il faut faire attention tout de même à ne pas croiser entre elles les balises de mise en commentaire.<br>
+			<a  class="ensavoirplus" href="http://www.startyourdev.com/html/tag-html-balise-commentaire" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="adresse">&ltaddress&gt</div><br>
+			L'élément HTML &ltaddress&gt, pour l'adresse, devrait être utilisé par les auteurs pour fournir une information de contact pour l'élément HTML ancêtre &ltarticle&gt ou &ltbody&gt le plus proche ; dans ce dernier cas, cela s'applique au document entier.<br>
+			<a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/address" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="a">&lta&gt</div><br>
+			L'élément &lta&gt (pour ancre ou anchor en anglais) définit un hyperlien vers un autre endroit de la même page ou vers une autre page sur le Web.<br>
+			<a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/a" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="b">&ltb&gt</div><br>
+			L'élément &ltb&gt (pour bold qui signifie gras en anglais) représente une partie d'un texte stylistiquement différente par rapport à du texte normal, sans lui apporter une importance particulière.
+			Elle fait partie des balises de mise en forme du texte. Elle est toujours maintenue mais il est possible et même préférable d'utiliser le style CSS. Elle permet de faire une mise en forme du texte placé entre ses balises d'ouverture et de fermeture en gras.<br>
+			<a class="ensavoirplus" href="http://www.startyourdev.com/html/tag-html-balise-b" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="body">&ltbody&gt</div><br>
+			L'élément &ltbody&gt représente le contenu principal du document HTML. Il ne peux y avoir qu'un élément &ltbody&gt par document.<br>
+			<a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/body" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="br">&ltbr&gt</div><br>
+			L'élément HTML &ltbr&gt crée un saut de ligne (un retour chariot) dans le texte. Il s'avère utile lorsque les sauts de ligne ont une importance (par exemple lorsqu'on écrit une adresse ou un poème).<br>
+			<a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/br" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="button">&ltbutton&gt</div><br>
+			L'élément HTML &ltbutton&gt est utilisé afin de créer un contrôle interactif ayant la forme d'un bouton.<br>
+			<a class="ensavoirplus" href="http://41mag.fr/liste-des-balises-html5/balise-button-html5" target="_blank">en savoir plus (lien 1)</a>
+			<a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/Button" target="_blank">(lien 2)</a>
+			<a class="ensavoirplus" href="https://www.w3schools.com/tags/tag_button.asp" target="_blank">(lien 3)</a><hr><br>
+
+			<div class="balise" id="cite">&ltcite&gt</div><br>
+			L'élément HTML &ltcite&gt contient le titre d'une œuvre telle qu'un livre, une chanson, un film, une sculpture… Cet élément doit inclure le titre de l'œuvre, le nom de son auteur ou une URL de référence qui peut-être abrégée en accord avec les conventions d'usages pour l'ajout des métadonnées de citations.<br>
+			<a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/cite" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="div">&ltdiv&gt</div><br>
+			L'élément HTML &ltdiv&gt (qui signifie division du document) est un conteneur générique qui permet d'organiser le contenu sans représenter rien de particulier. Il peut être utilisé afin de grouper d'autres éléments pour leur appliquer un style (en utilisant les attributs class ou id) ou parce qu'ils partagent des attributs aux valeurs communes, tel que lang. Il doit uniquement être utilisé lorsqu'aucun autre élément sémantique (par exemple &ltarticle&gt ou &ltnav&gt) n'est approprié.<br>
+			<a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/div" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="H1">&ltH1-6&gt</div><br>
+			Les éléments &lth1&gt à &lth6&gt représentent six niveaux de titres dans un document, &lth1&gt est le plus important et &lth6&gt est le moins important. Un élément de titre décrit brièvement le sujet de la section qu'il introduit.<br>
+			<a class="ensavoirplus" href="http://www.startyourdev.com/html/tag-html-balise-h1" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="head">&lthead&gt</div><br>
+			L'élément HTML &lthead&gt fournit des informations générales (métadonnées) sur le document, incluant son titre et des liens ou des définitions vers des scripts et feuilles de style.<br>
+			<a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/head" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="hr">&lthr&gt</div><br>
+			L'élément HTML &lthr&gt représente un changement thématique entre des éléments de paragraphe (par exemple, un changement de décor dans un récit, un changement de sujet au sein d'un section). Dans les versions précédentes d'HTML, il représente une ligne horizontale. Bien qu'il puisse toujours être représenté ainsi par les navigateurs graphiques, il possède désormais une signification sémantique et ne représente plus un élément de une mise en forme.<br>
+			<a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/hr" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise">&lt&gt</div><br>
+			
+			<a class="ensavoirplus" href="" target="_blank">en savoir plus</a><hr><br>
+
+		</p>
+	</article>
+</body>
+</html>
+
+<div class="balise">&lt &gt</div><br>
+<a class="ensavoirplus" href="" target="_blank">en savoir plus</a><hr><br>
+
+
+
+<!--<p>2+2 ?</p>
+
+<button onclick="myFunction()">réponse</button>
+
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = "4 !";
+}
+</script>
+<p id="demo"></p>-->
+
