@@ -40,7 +40,7 @@
 			margin-left: 3%;
 			margin-top: 165px;
 			height: 76%;
-			border-radius:4px;
+			border-radius:6px;
 			line-height: em;
 			overflow: hidden; 
 		}
@@ -77,6 +77,12 @@
 			font-weight: bold;
 			font-family:cursive;
 		}
+		.balise:hover{
+			color: darkred;
+		}
+		.obsolete{
+			color: grey;
+		}
 		.ensavoirplus:link{
 			color: black;
 			font-style: italic;
@@ -112,31 +118,31 @@
 			<li><a class="lien" href="#head">&lthr&gt</a></li>
 			<li><a class="lien" href="#hr">&lthtml&gt</a></li>
 			<li><a class="lien" href="#html">&lti&gt</a></li>
-			<li><a class="lien" href="#">&ltimg&gt</a></li>
-			<li><a class="lien" href="#">&ltli&gt</a></li>
-			<li><a class="lien" href="#">&ltlink&gt</a></li>
-			<li><a class="lien" href="#">&ltmeta&gt</a></li>
-			<li><a class="lien" href="#">&ltol&gt</a></li>
-			<li><a class="lien" href="#">&ltoption&gt</a></li>
-			<li><a class="lien" href="#">&ltp&gt</a></li>
-			<li><a class="lien" href="#">&lts&gt</a></li>
-			<li><a class="lien" href="#">&ltscript&gt</a></li>
-			<li><a class="lien" href="#">&ltselect&gt</a></li>
-			<li><a class="lien" href="#">&ltspan&gt</a></li>
-			<li><a class="lien" href="#">&ltstrong&gt</a></li>
-			<li><a class="lien" href="#">&ltstyle&gt</a></li>
-			<li><a class="lien" href="#">&lttable&gt</a></li>
-			<li><a class="lien" href="#">&lttbody&gt</a></li>
-			<li><a class="lien" href="#">&ltthead&gt</a></li>
-			<li><a class="lien" href="#">&lttr&gt</a></li>
-			<li><a class="lien" href="#">&lttd&gt</a></li>
-			<li><a class="lien" href="#">&lttextarea&gt</a></li>
-			<li><a class="lien" href="#">&lttfoot&gt</a></li>
-			<li><a class="lien" href="#">&ltth&gt</a></li>
-			<li><a class="lien" href="#">&lttitle&gt</a></li>
-			<li><a class="lien" href="#">&lttt&gt</a></li>
-			<li><a class="lien" href="#">&ltul&gt</a></li>
-			<li><a class="lien" href="#">&lttitle&gt</a></li>
+			<li><a class="lien" href="#i">&ltimg&gt</a></li>
+			<li><a class="lien" href="#img">&ltli&gt</a></li>
+			<li><a class="lien" href="#li">&ltlink&gt</a></li>
+			<li><a class="lien" href="#link">&ltmeta&gt</a></li>
+			<li><a class="lien" href="#meta">&ltol&gt</a></li>
+			<li><a class="lien" href="#ol">&ltoption&gt</a></li>
+			<li><a class="lien" href="#option">&ltp&gt</a></li>
+			<li><a class="lien" href="#p">&lts&gt</a></li>
+			<li><a class="lien" href="#s">&ltscript&gt</a></li>
+			<li><a class="lien" href="#script">&ltselect&gt</a></li>
+			<li><a class="lien" href="#select">&ltspan&gt</a></li>
+			<li><a class="lien" href="#span">&ltstrong&gt</a></li>
+			<li><a class="lien" href="#strong">&ltstyle&gt</a></li>
+			<li><a class="lien" href="#style">&lttable&gt</a></li>
+			<li><a class="lien" href="#table">&lttbody&gt</a></li>
+			<li><a class="lien" href="#tbody">&ltthead&gt</a></li>
+			<li><a class="lien" href="#thead">&lttr&gt</a></li>
+			<li><a class="lien" href="#tr">&lttd&gt</a></li>
+			<li><a class="lien" href="#td">&lttfoot&gt</a></li>			
+			<li><a class="lien" href="#tfoot">&lttextarea&gt</a></li>
+			<li><a class="lien" href="#textarea">&ltth&gt</a></li>
+			<li><a class="lien" href="#th">&lttitle&gt</a></li>
+			<li><a class="lien" href="#title">&lttt&gt</a></li>
+			<li><a class="lien" href="#tt">&ltul&gt</a></li>
+			<!--<li><a class="lien" href="#">&lttitle&gt</a></li>-->
 			<!--<li><a class="lien" href="#">&lt &gt</a></li>-->
 		</tt></ul>
 	</div>
@@ -200,21 +206,124 @@
 			L'élément HTML &lthr&gt représente un changement thématique entre des éléments de paragraphe (par exemple, un changement de décor dans un récit, un changement de sujet au sein d'un section). Dans les versions précédentes d'HTML, il représente une ligne horizontale. Bien qu'il puisse toujours être représenté ainsi par les navigateurs graphiques, il possède désormais une signification sémantique et ne représente plus un élément de une mise en forme.<br>
 			<a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/hr" target="_blank">en savoir plus</a><hr><br>
 
-			<div class="balise">&lt&gt</div><br>
+			<div class="balise" id="html">&lthtml&gt</div><br>
+			L'élément HTML &lthtml&gt représente la racine d'un document HTML ou XHTML. Tout autre élément du document doit être un descendant de cet élément.
+			<br><a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/html" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="i">&lti&gt</div><br>
+			L'élément HTML &lti&gt représente un morceau de texte qui se différencie du texte principal. Cela peut par exemple être le cas pour des termes techniques, des phrases dans une langue étrangère ou encore l'expression des pensées d'un personnage. Le contenu de cet élément est généralement affiché en italique.
+			<br><a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/i" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="img">&ltimg&gt</div><br>
+			L'élément HTML &ltimg&gt permet de représenter une image dans un document.
+			<button onclick="alert(' Les navigateurs peuvent ne pas toujours afficher l\'image référencée par l\'élément. C\'est notamment le cas des navigateurs non-graphiques (utilisé par les personnes handicapées visuellemeent), lorsque l\'utilisateur choisit de ne pas afficher les images ou lorsque le navigateur ne peut pas afficher l\'image car elle est invalide ou que son format n\'est pas pris en charge. Dans ces cas de figure, le navigateur pourra remplacer l\'image avec le texte utilisé pour l\'attribut alt de l\'élément img. Pour toutes ces raisons, il est fortement conseillé de fournir une valeur pertinente pour alt lorsque c\'est possible.')">note</button>
+			<br><a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/img" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="li">&ltli&gt</div><br>
+			L'élément HTML &ltli&gt représente un élément d'une liste. Cet élément doit être contenu dans une liste ordonnée (c'est-à-dire au sein d'un élément &ltol&gt), dans une liste non ordonnée (c'est-à-dire au sein d'un élément &ltul&gt) ou dans un menu (&ltmenu&gt). Pour les menus et les listes non-ordonnées, les éléments sont généralement affichés après une puce. Pour les listes ordonnées, un indicateur ordinal (un nombre ou une lettre) est utilisé.
+			<br><a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/li" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="link">&ltlink&gt</div><br>
+			L'élément HTML &ltlink&gt définit la relation entre le document courant et une ressource externe. Cet élément peut être utilisé pour définir un lien vers une feuille de style ou un cadre de navigation (accéder à la même page dans une langue différente par exemple).
+			<br><a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/link" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="meta">&ltmeta&gt</div><br>
+			L'élément HTML &ltmeta&gt représente toute information de métadonnées
+			<button onclick="alert(' il sert entre autres a pouvoir écrire des accents dans un texte (meta-charset=&quot;utf-8&quot;)')">note</button>
+			<br><a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/meta" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="ol">&ltol&gt</div><br>
+			L'élément HTML &ltol&gt représente une liste ordonnée. Les éléments d'une telle liste sont généralement affichés avec un indicateur ordinal pouvant prendre la forme de nombres, de lettres, de chiffres romains ou de points. La mise en forme de la numérotation n'est pas utilisée dans la description HTML mais dans la feuille de style CSS associée grâce à la propriété list-style-type.
+			<br><a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/ol" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="option">&ltoption&gt</div><br>
+			L'élément HTML &ltoption&gt, utilisé dans un formulaire, permet de représenter un contrôle au sein d'un élément &ltselect&gt. Cet élément peut donc représenter des éléments d'un menu dans un document HTML.
+			<br><a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/option" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="p">&ltp&gt</div><br>
+			L'élément HTML &ltp&gt représente un paragraphe de texte.
+			<br><a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/p" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="s">&lts&gt</div><br>
+			L'élément HTML &lts&gt permet d'afficher du texte qui est barré car il n'est plus pertinent ou car il est obsolète.
+			<br><a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/s" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="script">&ltscript&gt</div><br>
+			L'élément HTML &ltscript&gt est utilisé pour intégrer ou faire référence à un script exécutable.
+			<br><a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/script" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="select">&ltselect&gt</div><br>
+			L'élément HTML &ltselect&gt représente un contrôle qui fournit une liste d'options parmi lesquelles l'utilisateur pourra choisir.
+			<br><a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/select" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="span">&ltspan&gt</div><br>
+			L'élément HTML &ltspan&gt est un conteneur générique en ligne (inline) pour les contenus phrasés. Il ne représente rien de particulier. Il peut être utilisé pour grouper des éléments afin de les mettre en forme (grâce aux attributs class ou id et aux règles CSS) ou parce qu'ils partagent certaines valeurs d'attribut comme lang. Il doit uniquement être utilisé lorsqu'aucun autre élément sémantique n'est approprié. &ltspan&gt est très proche de l'élément &ltdiv&gt, mais l'élément &ltdiv&gt est un élément de bloc, alors que &ltspan&gt est un élément en ligne.
+			<br><a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/span" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="strong">&ltstrong&gt</div><br>
+			L'élément HTML &ltstrong&gt est utilisé afin de donner de l'importance à un texte, cela se traduit généralement par un affichage en gras.
+			<br><a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/strong" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="style">&ltstyle&gt</div><br>
+			L'élément HTML &ltstyle&gt contient des informations de mise en forme pour un document ou une partie d'un document. Par défaut, les instructions de mise en forme écrites dans cet élément sont écrites en CSS.
+			<br><a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/style" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="table">&lttable&gt</div><br>
+			L'élément HTML &lttable&gt permet de représenter un tableau de données, c'est-à-dire des informations exprimées sur un tableau en deux dimensions.
+			<br><a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/table" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="tbody">&lttbody&gt</div><br>
+			L’élément HTML &lttbodygt permet de regrouper un ou plusieurs éléments &lttr&gt afin de former le corps d'un tableau HTML (&lttable&gt).
+			<br><a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/tbody" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="thead">&ltthead&gt</div><br>
+			L'élément &ltthead&gt définit un ensemble de lignes qui définit l'en-tête des colonnes d'un tableau.
+			<br><a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/thead" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="tr">&lttr&gt</div><br>
+			L'élément HTML &lttr&gt définit une ligne de cellules dans un tableau. Une ligne peut être constitué d'éléments &lttd&gt et &ltth&gt.
+			<br><a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/tr" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="td">&lttd&gt</div><br>
+			L'élément HTML &lttd&gt définit une cellule d'un tableau qui contient des données. Cet élément fait partie du modèle de tableau.
+			<br><a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/td" target="_blank">en savoir plus</a><hr><br>
 			
-			<a class="ensavoirplus" href="" target="_blank">en savoir plus</a><hr><br>
+			<div class="balise" id="tfoot">&lttfoot&gt</div><br>
+			L'élément HTML &lttfoot&gt permet de définir un ensemble de lignes qui résument les colonnes d'un tableau.
+			<br><a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/tfoot" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="textarea">&lttextarea&gt</div><br>
+			L'élément HTML &lttextarea&gt représente un contrôle qui permet d'éditer du texte sur plusieurs lignes.
+			<br><a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/textarea" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="th">&ltth&gt</div><br>
+			L'élément HTML &ltth&gt définit une cellule d'un tableau comme une cellule d'en-tête pour un groupe de cellule.
+			<br><a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/th" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="title">&lttitle&gt</div><br>
+			L'élément &lttitle&gt définit le titre du document (qui est affiché dans la barre de titre du navigateur ou dans l'onglet de la page). Cet élément ne peut contenir que du texte, les balises qu'il contiendrait seraient ignorées.
+			<br><a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/title" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise obsolete" id="tt">&lttt&gt</div><br>
+			La balise HTML &lttt&gt, affiche le texte en police monospace. <strong>(obsoléte et déconseillé)</strong>
+			<br><a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/tt" target="_blank">en savoir plus</a><hr><br>
+
+			<div class="balise" id="ul">&ltul&gt</div><br>
+			L'élément HTML &ltul&gt représente une liste d'éléments sans ordre particulier. Il est souvent représenté par une liste à puces.
+			<br><a class="ensavoirplus" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/ul" target="_blank">en savoir plus</a><hr><br>
 
 		</p>
 	</article>
 </body>
 </html>
 
-<!--
+
 
 <div class="balise">&lt &gt</div><br>
-<a class="ensavoirplus" href="" target="_blank">en savoir plus</a><hr><br>
 
+			<a class="ensavoirplus" href="" target="_blank">en savoir plus</a><hr><br>
 
+<!--
 
 <p>2+2 ?</p>
 
