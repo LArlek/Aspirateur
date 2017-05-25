@@ -1,0 +1,355 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>
+		Générateur de texte
+	</title>
+	<link rel="shortcut icon" href="https://vignette2.wikia.nocookie.net/survivor-org/images/d/d4/H.jpg/revision/latest?cb=20130927203525" type="image/x-icon" />
+	<!-- Bootstrap core CSS -->
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="./bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+	<style>
+		*{
+			margin:0px 0px 0px 0px;
+			font-family: sans-serif;
+		}
+		#titre{
+			/*background-color:#1E2330;
+			background-color: #bfbfbf;*/
+			background-color: #6C7A89;
+			line-height: 120px;
+			color: black;
+			font-weight: bold;
+			font-family: fantasy;
+			position: fixed;
+			width: 100%;
+			font-size:60px;
+			border-bottom: solid black 3px;
+			text-align: center;
+			}
+		#titre:hover{
+			background-color:#ECECEC;
+			line-height: 125px;
+		}
+		.menuplus{
+			padding-top: 160px;
+			padding-bottom: 35px;
+		}
+		/*#carre{
+			border:solid 1px black;
+			background-color:#1E2330;
+			width: 25%;
+			float:left;
+			position:fixed;
+			margin-left: 3%;
+			margin-top: 165px;
+			height: 100px;
+			border-radius:6px;
+			overflow: hidden; 
+			color: white;
+			line-height: 40px;
+		}
+		#carre:hover{
+			border-radius:0px;
+			overflow-y: scroll;
+			height: 78%;
+			width: 550px; 
+		}*/
+		#carre{
+			background-color:#1E2330;
+			color: white;
+			line-height: 40px;
+
+		}
+		#texte{
+			line-height: 35px;
+			width: 80%; 
+			margin-left:10%;
+			margin-bottom: 10%;
+		}
+		#invisibletext{
+			height: 140px;
+		}
+		#para{
+			text-align: center;
+			line-height: 34px;
+			font-size: 3em;
+		}
+		#remplir{
+			text-align: center;
+			line-height: 20px;
+		}
+		#boutton{
+			text-align: center;
+		}
+		input, option, select{
+			color: black;
+		}
+		.aleatoire{
+			color: black;
+		}
+	</style>
+</head>
+<body>
+	<div class="row">
+	<div class="col-md-12">
+	<div id="titre">HacH</div></div></div>
+	<div id="carre">
+		<div id ="invisibletext"></div>
+		<br>
+		<p id="para" >Paramétres
+		<br><br>
+		<!--<button id="boutton">générer</button>
+		<button id="zero">remise a zéro</button>-->
+		<button id="aléatoire" class="btn btn-lg btn-primary"> aléatoire </button>
+		<button id="boutton" class="btn btn-lg btn-success"> générer l'histoire</button>
+		</p>
+		<br>
+			<div class="row">
+	    		<div class="col-md-1"></div>
+	        	<div class="col-md-5">		        		
+	        			<label>Prénom : <input type="text" class="" value="" placeholder="ex : Matthieu" id="prenom"></label><br>
+						<label>nom du Méchant : <input type="text" class="" value="" placeholder=" ex : Voldemort" id="mechant"></label><br>
+						<label>nom d'un ami : <input type="text" class="" value="" placeholder="ex : Georges" id="ami"></label><br>
+						<label>nom du lieu : <input type="text" class="" value="" placeholder="ex : Paris" id="lieuNM"></label><br>
+					<p>type : <select id="type"> 
+						<option value="aventure">aventure</option>
+						<option value="policier">coming soon</option>
+						<option value="fantastique">coming soon</option>
+					</select></p>
+					<p>lieu : <select id="lieu"> 
+						<option value="ville">ville</option>
+						<option value="montagne">montagne</option>
+						<option value="océan">océan</option>
+						<option value="planete">planete</option>
+						<option value="prairie">prairie</option>
+					</select></p>
+	        	</div>
+	        	<div class="col-md-5" >
+	        		<label>nom du veicule : <input type="text" class="" value="" placeholder="ex : peugeot" id="veicule"></label><br>
+					<label>Plaque d'immatriculation : <input type="text" class="" value="" placeholder="ex : 63-PXJ-37" id="immatriculation"></label><br>
+					<label>nom de rue : rue des <input type="text" class="" value="" placeholder="ex : ardoises" id="rue"></label>
+					<p>météo : <select id="meteo"> 
+						<option value="soleil">ensoleillé</option>
+						<option value="pluie">pluvieux</option>
+					</select></p>
+					<p>fin : <select id="fin"> 
+						<option value="heureuse">heureuse</option>
+						<option value="malheureuse">coming soon</option>
+					</select></p>
+	    		</div>
+	    		</div>
+			</div>
+			
+	<div>
+		<div id="invisibletext"></div>
+		<div id="texte"></div>
+	</div>
+	<script>
+	var boutton = document.getElementById("boutton");
+	var generateur = function() {	
+		var prenom = document.getElementById("prenom").value;
+		var mechant = document.getElementById("mechant").value;
+		var ami = document.getElementById("ami").value;
+		var lieuNM = document.getElementById("lieuNM").value;
+		var veicule = document.getElementById("veicule").value;
+		var immatriculation = document.getElementById("immatriculation").value;
+		var meteo = document.getElementById("meteo").value;
+		var lieu = document.getElementById("lieu").value;
+		var type = document.getElementById("type").value;
+		var fin = document.getElementById("fin").value;
+		var rue = document.getElementById("rue").value;
+		var typeVl ;
+		var meteoVl;
+		var lieuVl;
+		var finvl;
+			
+			
+			if (lieu === "ville") {
+				lieuVl = "ville";
+				lieuaction = "visite de gratte-ciel";
+				lieumaison = "son appartement";
+				lieuactiondepart = "au rez de chaussée du gratte-ciel";
+				lieudecor1 = "d'un angle de la rue";
+				lieudecor2 = "une voiture";
+			} else if (lieu === "montagne") {
+				lieuVl = "montagne";
+				lieuaction = "randonée";
+				lieumaison = "son chalet";
+				lieuactiondepart = "au téléphérique";
+				lieudecor1 = "d'une cabine de téléphérique";
+				lieudecor2 = "un rocher";
+			} else if (lieu === "océan") {
+				lieuVl = "océan";
+				lieuaction = "ballade en mer";
+				lieumaison = "sa maison sur pilotis";
+				lieuactiondepart = "au yacht";
+				lieudecor1 = "d'une dune";
+				lieudecor2 = "un palmier";
+			} else if (lieu === "planete") {
+				lieuVl = "planete";
+				lieuaction = "rencontre d'extraterrestres";
+				lieumaison = "son abri";
+				lieuactiondepart = "au vaisseau qui fait le trajet vers le repaire des extraterrestres";
+				lieudecor1 = "d'un cratère";
+				lieudecor2 = "la fussée";
+			} else {
+				lieuVl = "prairie";
+				lieuaction = "ballade dans les bois";
+				lieumaison = "sa maison";
+				lieuactiondepart = "a l'aurée du bois";
+				lieudecor1 = "d'un bosquet";
+				lieudecor2 = "un arbre";
+			}
+
+			if (meteo === "soleil") {
+				meteoVl = "faisait beau";
+				meteoPH = "sous ce temps radieux"
+			} else {
+				meteoVl = "pleuvait";
+				meteoPH = "malgré le temps pluvieux"
+			}
+
+			if (fin === "heureuse" && type === "aventure") {
+				finVlAv = "trois jours plus tard , le commisairiat affirma avoir retrouvé " + ami + " bailloné et ligoté dans la rue des " + rue + ". Personne ne savait où se trouvait " + mechant + " mais les policiers avaient de bonnes pistes. " + prenom + " et " + ami + " se marchèrent jusqu'" + lieuactiondepart + " et profitèrent d'une " + lieuaction + " bien méritée."	;
+			} else if (fin === "malheureuse" && type === "aventure"){
+				finVl = "cinq jours plus tard , le corps de " + ami + " fut retrouvé dans la rue des " + rue +     ; 
+			} else if (){
+
+			}
+
+			if (type === "aventure") {
+				typeVl = "C'était le matin à " + lieuNM + ". " + prenom + " révait d'une journée comme les autres mais son réve ne prenait pas en compte " + mechant + ", son pire ennemi . " + prenom + " fut réveillé par " + ami + ", a qui il avait promis d'aller faire une " + lieuaction + ". " + prenom + " se leva difficilement et regarda par la fenétre de " + lieumaison + ", il " + meteoVl + ". Ils marchèrent jusqu'" + lieuactiondepart + " quand soudain, " + mechant + " armé d'un gun surgit " + lieudecor1 + ". " + prenom + " et " + ami + " coururent vers " + lieudecor2 + " où ils s'y cachèrent. " + mechant + " les chercha et failli repartir quand " + ami + " éternua. " + mechant + " se retourna, attrapa " + ami + " le mis dans le coffrede sa " + veicule + " garée en contrebas et démara a toute allure. " + prenom + " couru aprés la " + veicule + " de " + mechant + " mais il n'aperçut que la plaque d'immatriculation : " + immatriculation + ". Il se rendit au commisairiat de " + lieuNM + " " + meteoPH + " et y deposa sa plainte au sujet de l'enlevement de " + ami + ". " + prenom + " laissa la police s'en charger et alla se reposer dans " + lieumaison + ". " + finVlAv ; 
+			} else if (type === "policier") {
+				typeVl = "policier";
+			} else {
+				typeVl = "fantastique";
+			}
+			
+
+
+			var final = typeVl;
+			document.getElementById("texte").innerHTML = final;
+			document.getElementById("texte").style.border = "solid black 1px";
+			console.log(final);
+			console.log(lieu);
+	};
+	var aleatoire = function () {
+		var prenomA = ["Matthieu","Maxime","Paul","Pierre","Jean","Yves","Aurelien","Vincent","Jordan","Mathis"];
+		var mechantA = ["Voldemort","Barbe-noire","Scar","dark Vador","Le Joker","Smith","L'empereur Palpatine","Hadés","Lucius Malefoy","Drago Malefoy"]; 
+		var amiA = ["Guillaume","Omar","Daniel","Louis","Alain","Franck","Gérard","François","david","Michel"];
+		var lieuNMA = ["Paris","Marseille","Lyon","Toulouse","Échirolles","Saint-Raphaël","Les Mureaux","Nevers","Saint-Herblain","Saint-Ouen"];
+		var veiculeA = ["Alfa Roméo","Audi","Bugatti","Corvette","Renault","Fiat","Toyota","Volvo","Jaguar","Ferrari"];
+		var immatriculationA = ["81-VAJ-48","57-FBZ-83","51-QCO-48","76-QPA-92","84-TKD-37","34-DZY-26","59-SDR-47","15-IJD-48","61-SCE-91","34-XZH-86"];
+		var rueA = ["Maillets","Embrumes","Manceaux","Pierres","Voitures","Claviers","Jeux","Martirs","Chanteurs","Militaires"];
+		var meteoA = ["soleil","pluie"];
+		var lieuA = ["ville","montagne","océan","planete","prairie"];
+		var typeA = ["aventure"];
+		var finA = ["heureuse"];
+		prenom.value = prenomA[Math.floor(Math.random() * prenomA.length)];
+		mechant.value = mechantA[Math.floor(Math.random() * mechantA.length)];
+		ami.value = amiA[Math.floor(Math.random() * amiA.length)];
+		lieuNM.value = lieuNMA[Math.floor(Math.random() * lieuNMA.length)];
+		veicule.value = veiculeA[Math.floor(Math.random() * veiculeA.length)];
+		immatriculation.value = immatriculationA[Math.floor(Math.random() * immatriculationA.length)];
+		rue.value = rueA[Math.floor(Math.random() * rueA.length)];
+		meteo.value = meteoA[Math.floor(Math.random() * meteoA.length)];
+		lieu.value = lieuA[Math.floor(Math.random() * lieuA.length)];
+		type.value = typeA[Math.floor(Math.random() * typeA.length)];
+		fin.value = finA[Math.floor(Math.random() * finA.length)];
+	};
+	boutton.addEventListener("click", generateur);
+	aléatoire.addEventListener("click", aleatoire);
+	console.log(aléatoire);
+	</script>
+	</body>
+</html>
+
+
+
+
+
+
+<!--
+Science-fi:
+Humains ont pris le pouvoir et les extra-terrestre
+sont en esclavages, le héros fait partie d'une
+organisation (un peu) extrémiste qui peuvent être de
+toute races (dont des humains qui ne veulent pas
+réduire en esclavages les aliens) quitte a buter des
+humains. Évidemment les services secrets des
+humains essaye d'infiltrer l'organisation
+Les fins, telles que je les imagines ne seront ni
+heureuse ni malheureuse, tout cela dépend de ta
+position, en gros j'ai envie que y'en ai une ou le héros
+crève et l'empire survit et les aliens sont en
+esclavage pour un bon bout de temps, et une ou il y a
+l'organisation qui lache un gaz anti-humain sur un
+sistème solaire entier en gros, la fin est bien ou
+mauvaise selon la position du lecteur
+Fantaisie:
+Il y a fort fort longtemps vivait des hommes bien plus
+intelligents que nous maintenant, et utilisait la magie,
+c'était le temps des anciens, mais un malheureux jour,
+Satan sorti de sa tanière et s'en pris a une minuscule
+planète, mais, n'étant pas près a une attaque des
+forces du mal. la planète fut enseveli dans les
+flammes, mais, il restait quelques personnes encore
+vivantes ayant plus de pouvoirs magiques que les
+autres, ils ont utiliser leurs derniers pouvoirs pour
+s'adapter, n'ayant plus de pouvoirs a cause de leur
+transformation, ils ne leur reste plus que leurs épées
+en argent et leur esprit, qui devra être plus malin que
+le MALIN*
+Policier:
+Il fut un jour ou plutôt une nuit, dans une ville, il y eu
+plusieurs morts et il n'y eu aucun signe de meurtre,
+*Satan
+Générateur d'histoire Matthieu
+ code Page 1 
+plusieurs morts et il n'y eu aucun signe de meurtre,
+une femme morte dans son bain, son sèche cheveux
+serait tomber et aurait électrocuter la femme, un
+homme, serait tomber de sa voiture tandis qu'il était
+au téléphone et un autre mourut mystérieusement, il
+était en bouilli, ils était tous des juges. Le héros se
+lance a la recherche d'indices pour savoir si il y a eu
+un meurtre, plus tard il eu non seulement des indices
+mais aussi des preuves, il se mit a la recherches des
+criminels, ce dont il ne se doutai pas, c'est qu'il était
+leur prochaine victime.
+Les fins paraissent évidentes, l'une ou les criminels
+tuent le héros, l'autre ou ils se font attraper
+Histoire:
+On est pendant la seconde guerre mondiale où nous
+sommes dans la peau d'un allemand, la France n'a pas
+encore été prise mais elle risque de bientôt l'être, le
+jeune soldat tente d'empêcher le meurtre d'une
+famille juive, mais il se fait arrêter, grâce a un malin
+stratagème a partir de cuillères le traitre s'en vas de
+la prison, plus tard, la France est prise par les
+allemands, et le traitre doit se cacher, il sait
+désormais ce qu'ont ressenti les juifs et se sent
+honteux, il décide de réparer ses erreurs en entrant
+dans la révolution
+Pareil que le précédent, les fins paraissent évidentes,
+l'une ou il se fait buter l'autre ou il réussi a aider la
+révolution de manières conséquente.
+Mythologie:
+Alors que Zeus s'asseyait a sa table, il fut attaquer
+par derrière par une divinité qu'il ne connaissait pas,
+pendant son enlèvement Hadès pris le pouvoir, étant
+proche de son frère, Poséidon essaya de retrouver
+Zeus dans un périple dans les mers mais, ne pouvant
+aller autre part il demanda au héros de retrouver
+Zeus, l'entrainant dans une lutte sans merci avec un
+ code Page 2 
+Zeus, l'entrainant dans une lutte sans merci avec un
+dieu du "vult" nomé TheFantasio974, avec comme sous
+chef Bob Lennon, Fanta ayant hypnotiser toute ses
+victimes, Bob Lennon n'en faisant pas parti
+La fin mauvaise serait que bob et le dieu du vult
+détruise les dieux de l'olympe grâce aux hypnose, et
+la bonne serait celle ou bob se rebelle contre Fanta et
+aide le héros à sortir Zeus d'ici-->
