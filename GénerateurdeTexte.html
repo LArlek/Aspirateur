@@ -5,21 +5,19 @@
 		Générateur de texte
 	</title>
 	<!-- favicon -->
-	<link rel="shortcut icon" href="https://vignette2.wikia.nocookie.net/survivor-org/images/d/d4/H.jpg/revision/latest?cb=20130927203525" type="image/x-icon" />
+	<link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Font_H.svg/2000px-Font_H.svg.png" type="image/x-icon" />
 	<!-- Bootstrap core CSS -->
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap theme -->
     <link href="./bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
 	<style>
 	body{
-
 	}
 	.para{
 		text-align: center;
 		line-height: 20px;
 	}
 	#Parametres{
-		font-size: 2em;
 		padding-top: 70px;
 	}
 	input, option, select{
@@ -39,7 +37,7 @@
 	<nav class="navbar navbar-default navbar-fixed-top nav-titre">
       <div class="container ">
         <div class="navbar-header navbar-brand titre" >
-          HacH
+          HacH (beta)
         </div>
       </div>
     </nav>
@@ -47,7 +45,7 @@
 	<div class="container">
 		<div class="row para" id="Parametres" >
 			<div class="col-md-12">
-				<h1 >Paramétres</h1>
+				<h2>Paramètres</h2>
 			</div>
 		</div>
 
@@ -55,8 +53,8 @@
     		<div class="col-md-1"></div>
 			<div class="col-md-10">
 				<br>
-				<button id="aléatoire" class="btn btn-primary"> aléatoire </button>
-				<button id="boutton" class="btn btn-warning "> générer l'histoire</button>
+				<button id="aléatoire" class="btn btn-primary"> aléatoires </button>
+				<a id="boutton" class="btn btn-warning " href="#texte"> générer l'histoire</a>
 			</div>
     		<div class="col-md-1"></div>
 		</div>
@@ -64,14 +62,13 @@
 		<div class="row">
     		<div class="col-md-1"></div>
         	<div class="col-md-5">		        		
-	        			<label>Prénom : <input type="text" class="" value="" placeholder="ex : Matthieu" id="prenom"></label><br>
-						<label>nom du Méchant : <input type="text" class="" value="" placeholder=" ex : Voldemort" id="mechant"></label><br>
-						<label>nom d'un ami : <input type="text" class="" value="" placeholder="ex : Georges" id="ami"></label><br>
-						<label>nom du lieu : <input type="text" class="" value="" placeholder="ex : Paris" id="lieuNM"></label><br>
-						<label>type : <select id="type"> 
+	        			<label>Prénom : <input type="text" class="" value="Matthieu" placeholder="ex : Matthieu" id="prenom"></label><br>
+						<label>nom d'un ennemi : <input type="text" class="" value="Voldemort" placeholder=" ex : Voldemort" id="mechant"></label><br>
+						<label>nom d'un ami : <input type="text" class="" value="Georges" placeholder="ex : Georges" id="ami"></label><br>
+						<label>nom du lieu : <input type="text" class="" value="Paris" placeholder="ex : Paris" id="lieuNM"></label><br>
+						<label>genre : <select id="type"> 
 										<option value="aventure">aventure</option>
-										<option value="policier">coming soon</option>
-										<option value="fantastique">coming soon</option>
+										<option value="wizard">wizard</option>
 									  </select></label><br>
 						<label>lieu : <select id="lieu"> 
 							<option value="ville">ville</option>
@@ -82,16 +79,16 @@
 						</select></label>
 	        </div>
 	        <div class="col-md-5" >
-	        		<label>nom du veicule : <input type="text" class="" value="" placeholder="ex : peugeot" id="veicule"></label><br>
-					<label>Plaque d'immatriculation : <input type="text" class="" value="" placeholder="ex : 63-PXJ-37" id="immatriculation"></label><br>
-					<label>nom de rue : rue des <input type="text" class="" value="" placeholder="ex : ardoises" id="rue"></label><br>
+	        		<label>nom du vehicule : <input type="text" class="" value="peugeot" placeholder="ex : peugeot" id="veicule"></label><br>
+					<label>Immatriculation : <input type="text" class="" value="63-PXJ-37" placeholder="ex : 63-PXJ-37" id="immatriculation"></label><br>
+					<label>nom de rue : rue <input type="text" class="" value="de l'ardoise" placeholder="ex : de l'ardoise" id="rue"></label><br>
 					<label>météo : <select id="meteo"> 
 						<option value="soleil">ensoleillé</option>
 						<option value="pluie">pluvieux</option>
 					</select></label><br>
 					<label>fin : <select id="fin"> 
 						<option value="heureuse">heureuse</option>
-						<option value="malheureuse">coming soon</option>
+						<option value="malheureuse">malheureuse</option>
 					</select></label>
 	    	</div>
     		<div class="col-md-1"></div>
@@ -172,16 +169,26 @@
 			if (fin === "heureuse" && type === "aventure") {
 				finVlAv = "trois jours plus tard , le commisairiat affirma avoir retrouvé " + ami + " bailloné et ligoté dans la rue des " + rue + ". Personne ne savait où se trouvait " + mechant + " mais les policiers avaient de bonnes pistes. " + prenom + " et " + ami + " se marchèrent jusqu'" + lieuactiondepart + " et profitèrent d'une " + lieuaction + " bien méritée."	;
 			} else if (fin === "malheureuse" && type === "aventure"){
-				finVl = "cinq jours plus tard , le corps de " + ami + " fut retrouvé dans la rue des " + rue     ; 
+				finVlAv = "cinq jours plus tard , le corps de " + ami + " fut retrouvé dans la rue des " + rue + " par le commisairiat; Il était criblé de balles et la " + veicule + " était garée à coté . ainsi s'acheva les vacances de " + prenom + " à " + lieuNM;
+			} else if (fin === "heureuse" && type === "wizard"){
+				finVlWz = " heureusement, " + ami + " avait pensé a tout et lui avait amené une " + veicule + " immatriculé : " + immatriculation + ". " + prenom + " s'enfuitet alla chercher de l'aide rue " + rue + " (une rue recommandée par " + ami + " en cas de besoin). Il y trouva le professeur Dumbeldore qui lui vint en aide et transplana instantanément car la vie de l'ami de " + prenom + " lui tenait a coeur. Quand il revint avec " + ami + ", il avait terassé les mangemorts. " + prenom + " rentra chez lui, il était temps , le jour se levait... ";  
+			} else if (fin === "malheureuse" && type === "wizard"){
+				finVlWz = prenom + " commença a paniquer et pris la fuite, quelques instants plus tard, il entendit un cri. Il n'était pas sur mais il lui semblait que s'était celui de " + ami +  ". Puis il entendit des rires et des bruits de pas, on le chassait ! quelques instants plus tard, il eu une douleur fulgurante a la cheville, il le savait, il avait recu le sortilége de mort. La dernière image du monde qu'il ait eu, c'était celle de " + mechant + " lui crachant au visage."      ;
+			} else if (fin === "heureuse" && type === "fantastique"){
+				finVlAv = ""; 
+			} else if (fin === "malheureuse" && type === "fantastique"){
+				finVlAv = ""; 	 		 
 			} else {
 
 			}
 
 			if (type === "aventure") {
 				typeVl = "C'était le matin à " + lieuNM + ". " + prenom + " révait d'une journée comme les autres mais son réve ne prenait pas en compte " + mechant + ", son pire ennemi . " + prenom + " fut réveillé par " + ami + ", a qui il avait promis d'aller faire une " + lieuaction + ". " + prenom + " se leva difficilement et regarda par la fenétre de " + lieumaison + ", il " + meteoVl + ". Ils marchèrent jusqu'" + lieuactiondepart + " quand soudain, " + mechant + " armé d'un gun surgit " + lieudecor1 + ". " + prenom + " et " + ami + " coururent vers " + lieudecor2 + " où ils s'y cachèrent. " + mechant + " les chercha et failli repartir quand " + ami + " éternua. " + mechant + " se retourna, attrapa " + ami + " le mis dans le coffrede sa " + veicule + " garée en contrebas et démara a toute allure. " + prenom + " couru aprés la " + veicule + " de " + mechant + " mais il n'aperçut que la plaque d'immatriculation : " + immatriculation + ". Il se rendit au commisairiat de " + lieuNM + " " + meteoPH + " et y deposa sa plainte au sujet de l'enlevement de " + ami + ". " + prenom + " laissa la police s'en charger et alla se reposer dans " + lieumaison + ". " + finVlAv ; 
+			} else if (type === "wizard") {
+				typeVl = "\"Tu est un sorcier " + prenom + " !\" Chaque nuit, le même reve, la voix de " + ami + " resonnait toujours dans sa tête depuis qu'il l'avait rencontré cet été. " + prenom + " n'était pas normal ! C'était le soir, il " + meteoVl + ". A " + lieuNM + ", tout le monde était fan d'une série du nom de Harry Potter où le protaginiste était comme " + prenom + " un sorcier. cette nuit là, la mairie de " + lieuNM + " avait organisé une " + lieuaction + " et il falait se rendre " + lieuactiondepart + " avant 20h. " + prenom + " y alla et vu que " + mechant + " l'avait suivi. " + mechant + " était aussi n sorcier mais moins qualifié que " + prenom + ". Aprés la " + lieuaction + " rentra a " + lieumaison + ", mais quelque chose clochait, " + mechant + " l'avait suivi, et il n'était pas seul. 4 mangemorts était derrière lui. N'écoutant que son instinct, " + prenom + " se jeta derrière " + lieudecor2 + " quand " + ami + " surgit " + lieudecor1 + ". " + prenom + " se rendit compte qu'il n'avait que très peu d'entrainement et qu'il avait oublié sa baguette chez lui. " + finVlWz  ;
 			} else if (type === "policier") {
 				typeVl = "policier";
-			} else {
+			}else {
 				typeVl = "fantastique";
 			}
 			
@@ -191,20 +198,20 @@
 			document.getElementById("texte").innerHTML = final;
 			document.getElementById("texte").className = "well";
 			console.log(final);
-			console.log(lieu);
+			console.log(typeVl);
 	};
 	var aleatoire = function () {
 		var prenomA = ["Matthieu","Maxime","Paul","Pierre","Jean","Yves","Aurelien","Vincent","Jordan","Mathis"];
 		var mechantA = ["Voldemort","Barbe-noire","Scar","dark Vador","Le Joker","Smith","L'empereur Palpatine","Hadés","Lucius Malefoy","Drago Malefoy"]; 
 		var amiA = ["Guillaume","Omar","Daniel","Louis","Alain","Franck","Gérard","François","david","Michel"];
-		var lieuNMA = ["Paris","Marseille","Lyon","Toulouse","Échirolles","Saint-Raphaël","Les Mureaux","Nevers","Saint-Herblain","Saint-Ouen"];
+		var lieuNMA = ["Paris","Marseille","Lyon","Toulouse","Échirolles","Saint-Raphaël","Les Mureaux","Nevers","Saint-Herblain","Saint-Ouen","Bois-Guillaume"];
 		var veiculeA = ["Alfa Roméo","Audi","Bugatti","Corvette","Renault","Fiat","Toyota","Volvo","Jaguar","Ferrari"];
 		var immatriculationA = ["81-VAJ-48","57-FBZ-83","51-QCO-48","76-QPA-92","84-TKD-37","34-DZY-26","59-SDR-47","15-IJD-48","61-SCE-91","34-XZH-86"];
-		var rueA = ["Maillets","Embrumes","Manceaux","Pierres","Voitures","Claviers","Jeux","Martirs","Chanteurs","Militaires"];
+		var rueA = ["Des Maillets"," Des Embrumes","Des Manceaux","De la Pierre","Des Voitures","Du Martir","Des Chanteurs","Des Militaires","Des Coqueliquettes"];
 		var meteoA = ["soleil","pluie"];
 		var lieuA = ["ville","montagne","océan","planete","prairie"];
-		var typeA = ["aventure"];
-		var finA = ["heureuse"];
+		var typeA = ["aventure","wizard"];
+		var finA = ["heureuse","malheureuse"];
 		prenom.value = prenomA[Math.floor(Math.random() * prenomA.length)];
 		mechant.value = mechantA[Math.floor(Math.random() * mechantA.length)];
 		ami.value = amiA[Math.floor(Math.random() * amiA.length)];
@@ -233,6 +240,5 @@
 	</body>
 </html>
 
-
-
+<!--https://openclipart.org/image/2400px/svg_to_png/234401/information.png-->
 
