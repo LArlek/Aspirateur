@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>selecteur de recettes</title>
+	<!-- favicon -->
+	<link rel="shortcut icon" href="http://www.drodd.com/images14/r22.png" type="image/x-icon" />
+	<!-- Bootstrap core CSS -->
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="./bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+	<style>
+		#centre{
+			text-align: center;
+			margin-top: 10%;
+			font-size: 4em;
+		}
+		#decale{
+			margin-left: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div id=centre>"<span id="texte"></span>"<br><button id="boutton" class="btn lg-btn btn-danger ">STOP</button><button id="decale" class="btn lg-btn btn-info" onclick="javascript:window.location.reload()">restart	</button></div>
+	<script>
+	var recettes = ["blog","boutique","banque d'images"];	
+	var change = function(){
+		var actuel = recettes[Math.floor(Math.random() * recettes.length)];
+		document.getElementById("texte").innerHTML = actuel;
+	}
+	var animationchange = window.setInterval(change, 100);
+	var stop = function(){
+		window.clearInterval(animationchange);
+	}
+	document.getElementById("boutton").addEventListener("click", stop);
+
+
+
+
+	</script>
+
+</body>
+</html>
+
+<!--<script>
+  // Step 1. What element do we want to animate?
+  var countdown = document.getElementById("countdown");
+  // Step 2. What function will change it each time?
+  var countItDown = function() {
+    var currentTime = parseFloat(countdown.textContent);
+    if (currentTime > 0) {
+       countdown.textContent = currentTime - 1;   
+    } else {
+        window.clearInterval(timer);
+    }
+    
+  };
+  // Step 3: Call that on an interval
+  var timer = window.setInterval(countItDown, 1000);
+  </script>
+
+,"Daphné","Barthélémy","Christine","Joséphine","Vincent","Georges","Antoine"
+
+
+
+
+
+
+
+
+  -->
