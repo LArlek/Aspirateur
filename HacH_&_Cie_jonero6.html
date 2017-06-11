@@ -22,6 +22,11 @@
 		margin-top: 100px;
 		font-size: medium;
 	}
+	@media (max-width: 780px) {
+    .texte{
+      font-size: x-small;
+    }
+  }
 	.libre{
 		border: black solid 1px;
 		padding : 5px 5px 5px 5px;
@@ -33,6 +38,9 @@
 	.logo-user{
 		float: left;
 		margin-right: 10px;
+	}
+	.logo-alt{
+
 	}
 	</style>
 </head>
@@ -50,44 +58,56 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="./HacH & Cie.html">Home</a></li>
+            <li><a href="./HacH_&_Cie.html">Home</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mes sites <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">site 1</a></li>
+                <li><a href="http://delirious.rf.gd" target="_blank">générateur d'histoires</a></li>
                 <li><a href="#">site 2</a></li>
                 <li><a href="#">site 3</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="#">Khan academy</a></li>
+                <li><a href="https://fr.khanacademy.org" target="_blank">Khan academy</a></li>
               </ul>
             </li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>  
-    <div class="container texte">
+    <div class="container">
+    	<div class="texte">
 		<p>
-			<img class="img-thumbnail logo-user" src="./images/jonero6_logo.png" width="120px" title="Jonero6 : HTML/CSS/JS/Bootstrap ">
+			<img class="img-thumbnail logo-user logo-alt" src="./images/jonero6_logo.png" width="120px" title="Jonero6 : HTML/CSS/JS/Bootstrap ">	
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ex vitae felis pretium molestie at et magna. Quisque a velit at lacus lobortis ultricies. Curabitur porta in odio in sagittis. Aenean eleifend nunc sed metus imperdiet gravida. Maecenas id viverra quam. In vitae nisl sit amet lacus laoreet feugiat ut ac quam. Phasellus faucibus metus vitae est pulvinar, eget pharetra massa aliquam.
 			Sed vitae semper quam, eget rutrum mi. Pellentesque interdum magna mattis nisl venenatis, auctor bibendum mauris aliquam. Morbi pharetra tincidunt nunc. Aenean pharetra mollis auctor. Quisque non nibh erat. Sed blandit ligula justo, vitae rutrum leo sagittis eu. Fusce interdum lobortis metus, sit amet interdum orci eleifend et.
 		</p>
-		<div class="libre">
-			<b>libre</b>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ex vitae felis pretium molestie at et magna. Quisque a velit at lacus lobortis ultricies. Curabitur porta in odio in sagittis. Aenean eleifend nunc sed metus imperdiet gravida. Maecenas id viverra quam. In vitae nisl sit amet lacus laoreet feugiat ut ac quam. Phasellus faucibus metus vitae est pulvinar, eget pharetra massa aliquam.
-			Sed vitae semper quam, eget rutrum mi. Pellentesque interdum magna mattis nisl venenatis, auctor bibendum mauris aliquam. Morbi pharetra tincidunt nunc. Aenean pharetra mollis auctor. Quisque non nibh erat. Sed blandit ligula justo, vitae rutrum leo sagittis eu. Fusce interdum lobortis metus, sit amet interdum orci eleifend et.
-		</div>
+		<div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Libre</h3>
+            </div>
+            <div class="panel-body">
+            	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ex vitae felis pretium molestie at et magna. Quisque a velit at lacus lobortis ultricies. Curabitur porta in odio in sagittis. Aenean eleifend nunc sed metus imperdiet gravida. Maecenas id viverra quam. In vitae nisl sit amet lacus laoreet feugiat ut ac quam. Phasellus faucibus metus vitae est pulvinar, eget pharetra massa aliquam.
+				Sed vitae semper quam, eget rutrum mi. Pellentesque interdum magna mattis nisl venenatis, auctor bibendum mauris aliquam. Morbi pharetra tincidunt nunc. Aenean pharetra mollis auctor. Quisque non nibh erat. Sed blandit ligula justo, vitae rutrum leo sagittis eu. Fusce interdum lobortis metus, sit amet interdum orci eleifend et.
+            </div>
+        </div>
+        </div>
 		<div class="liste-users row">
 			<br>
+
 			<div class="col-md-1"></div>
-			<a href="./HacH & Cie firemath.html"><img class="img-thumbnail col-md-2" src="./images/firemath_logo.jpg" width="120px" title="Firemath : HTML/CSS"></img></a>
-			<div class="col-md-2"></div>
-			<a href="./HacH & Cie nyzox.html"><img class="img-thumbnail col-md-2" src="./images/nyzox_logo.png" width="120px" title="Nyzox : HTML/CSS/PHP "></img></a>
-			<div class="col-md-2"></div>
-			<a href="./HacH & Cie icelad.html"><img class="img-thumbnail col-md-2" src="./images/icelad_logo.jpg" width="120px" title="Icelad : HTML/CSS/JS "></img></a>
+			<div class="col-md-3">	 
+				<a href="./HacH_&_Cie_firemath.html"><img class="img-thumbnail" src="./images/firemath_logo.jpg" width="120px" title="Firemath : HTML/CSS"> Firemath</a>
+			</div>
 			<div class="col-md-1"></div>
+			<div class="col-md-3">
+				<a href="./HacH_&_Cie_nyzox.html"><img class="img-thumbnail" src="./images/nyzox_logo.png" width="120px" title="Nyzox : HTML/CSS/PHP "> Nyzox</a>
+			</div>
+			<div class="col-md-1"></div>
+			<div class="col-md-3">
+				<a href="./HacH_&_Cie_icelad.html"><img class="img-thumbnail" src="./images/icelad_logo.jpg" width="120px" title="Icelad : HTML/CSS/JS "> Icelad</a>
+			</div>
 			
 		</div>
 		<br>
